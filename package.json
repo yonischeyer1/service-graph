@@ -1,0 +1,10 @@
+{
+  "name": "backslash-graph",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "scripts": {
+    "build": "pnpm --filter @backslash/contracts build && pnpm --filter @backslash/server build && pnpm --filter @backslash/client build",
+    "dev": "pnpm --filter @backslash/contracts build && pnpm --parallel --filter @backslash/server --filter @backslash/client dev",
+    "test": "pnpm --filter @backslash/contracts build && pnpm --filter @backslash/server test"
+  }
+}
