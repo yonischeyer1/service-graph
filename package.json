@@ -1,10 +1,19 @@
 {
-  "name": "backslash-graph",
+  "name": "service-graph",
   "private": true,
   "packageManager": "pnpm@10.12.1",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "esbuild"
+    ]
+  },
   "scripts": {
-    "build": "pnpm --filter @backslash/contracts build && pnpm --filter @backslash/server build && pnpm --filter @backslash/client build",
-    "dev": "pnpm --filter @backslash/contracts build && pnpm --parallel --filter @backslash/server --filter @backslash/client dev",
-    "test": "pnpm --filter @backslash/contracts build && pnpm --filter @backslash/server test"
+    "build": "pnpm --filter @service-graph/contracts build && pnpm --filter @service-graph/server build && pnpm --filter @service-graph/client build",
+    "dev": "pnpm --filter @service-graph/contracts build && pnpm --parallel --filter @service-graph/server --filter @service-graph/client dev",
+    "test": "pnpm --filter @service-graph/contracts build && pnpm --filter @service-graph/server test"
+  },
+  "devDependencies": {
+    "vite-plus": "^1.3.0"
   }
 }

@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "Fraunces", ui-serif, serif;
+  --color-ink: #14110e;
+  --color-panel: #1c1814;
+  --color-line: #3a342c;
+  --color-paper: #f3ecdf;
+  --color-muted: #a39888;
+  --color-lime: #d6ff4a;
+  --color-coral: #ff6b3d;
+  --color-gold: #e7b15a;
+  --color-lilac: #c4b6ff;
+  --color-teal: #7ddec8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  font-family: var(--font-sans);
+}
+
+.react-flow {
+  --xy-background-color: transparent;
+  --xy-node-border-radius: 0;
+  background: transparent;
+}
+
+.react-flow__attribution {
+  background: transparent !important;
+  color: var(--color-muted) !important;
+}
